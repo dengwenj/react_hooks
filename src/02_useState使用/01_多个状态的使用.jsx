@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function MultiHookState() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
   const [person, setPerson] = useState(['张三', '小邓'])
 
   function addPerson() {
@@ -10,7 +10,7 @@ export default function MultiHookState() {
 
   return (
     <div>
-      <h2>{count}</h2>
+      {/* <h2>{count}</h2> */}
       <ul>
         {person.map((item, index) => (
           <li key={index}>{item}</li>
