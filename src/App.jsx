@@ -9,8 +9,9 @@ import React, { createContext, useState } from 'react'
 // import EffectHookDemo from './03_useEffect使用/03_useEffect模拟订阅和取消订阅'
 // import MultiEffectHookDemo from './03_useEffect使用/04_多个useEffect以及依赖问题'
 // import ContextHookDemo from './04_useContext使用/useContext的使用'
-import Home from './05_useReducer使用/home'
-import Count from './05_useReducer使用/Count'
+// import Home from './05_useReducer使用/home'
+// import Count from './05_useReducer使用/Count'
+import CallbackHookDemo from './06_useCallback的使用/01_useCallback进行性能优化'
 
 // 创建 context 容器对象
 export const userContext = createContext()
@@ -37,8 +38,11 @@ export default function App() {
         <ContextHookDemo />
       </userContext.Provider> */}
       {/* useReducer的使用 */}
-      <Home />
-      <Count />
+      {/* <Home />
+      <Count /> */}
+
+      {/* useCallback的使用 */}
+      <CallbackHookDemo />
       <button onClick={() => setIsShow(!isShow)}>切换</button>
     </div>
   )
