@@ -21,7 +21,8 @@ import React, { createContext, useState } from 'react'
 // import LayoutEffectDemo from './10_useLayoutEffect使用/uselauoutEffect的count修改'
 // import CustomizeHookDemo1 from './11_自定义Hook使用/01_自定义Hook的基本使用'
 // import CustomizeHookDemo2 from './11_自定义Hook使用/02_自定义Hook练习-Context共享'
-import CustomizeHookDemo3 from './11_自定义Hook使用/03_自定义Hook练习-获取滚动位置'
+// import CustomizeHookDemo3 from './11_自定义Hook使用/03_自定义Hook练习-获取滚动位置'
+import CustomizeHookDemo4 from './11_自定义Hook使用/04_自定义Hook练习-localStorage存储'
 
 // 创建 context 容器对象
 export const userContext = createContext()
@@ -80,7 +81,8 @@ export default function App() {
           <CustomizeHookDemo2 />
         </tokenContext.Provider>
       </userInfoContext.Provider> */}
-      <CustomizeHookDemo3 />
+      {/* <CustomizeHookDemo3 /> */}
+      <CustomizeHookDemo4 />
       <button onClick={() => setIsShow(!isShow)}>切换</button>
     </div>
   )
