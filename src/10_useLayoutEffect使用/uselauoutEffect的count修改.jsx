@@ -1,8 +1,8 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 
 /* 
   useEffect 在渲染的内容更行到 DOM 之后执行
-  useLayoutEffect 在渲染的内容更新之前执行
+  useLayoutEffect 在渲染的内容更新 DOM 之前执行
 
 */
 
