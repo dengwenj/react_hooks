@@ -12,7 +12,7 @@ export default function MemoDemo2() {
 
   const info = useMemo(() => {
     return { name: 'xd', age: 21 }
-  }, [])
+  }, []) // 这里只执行一次就不执行这里了 因为这里谁都不依赖
 
   return (
     <div>

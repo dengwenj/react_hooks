@@ -13,7 +13,9 @@ import React, { createContext, useState } from 'react'
 // import Count from './05_useReducer使用/Count'
 // import CallbackHookDemo from './06_useCallback的使用/01_useCallback进行性能优化'
 // import MemoDemo1 from './07_useMemo使用/01_useMemo复杂计算的应用'
-import MemoDemo2 from './07_useMemo使用/02_useMemo传入子组件应用类型'
+// import MemoDemo2 from './07_useMemo使用/02_useMemo传入子组件应用类型'
+// import RefDemo1 from './08_useRef使用/01_useRef引用DOM'
+import RefDemo2 from './08_useRef使用/02_useRef引用其他数据'
 
 // 创建 context 容器对象
 export const userContext = createContext()
@@ -24,29 +26,38 @@ export default function App() {
   return (
     <div>
       {/* 初体验hooks */}
-      {/* <CounterClass />
-      <CounterHook /> */}
+      {/* <CounterClass /> */}
+      {/* <CounterHook /> */}
+
       {/* useState的使用 */}
       {/* <MultiHookState /> */}
       {/* <ComplexHookState /> */}
+
       {/* useEffect的使用 */}
       {/* <UpdateClass /> */}
       {/* <HookTitle /> */}
       {/* 这个意思就是 如果第一个为真就执行第二个，如果第一个为假，就不执行第二个 */}
       {/* {isShow && <EffectHookDemo />} */}
       {/* <MultiEffectHookDemo /> */}
+
       {/* useContext的使用 */}
       {/* <userContext.Provider value={{ name: '小邓', age: '18' }}>
         <ContextHookDemo />
       </userContext.Provider> */}
+
       {/* useReducer的使用 */}
-      {/* <Home />
-      <Count /> */}
+      {/* <Home /> */}
+      {/* <Count /> */}
+
       {/* useCallback的使用 */}
       {/* <CallbackHookDemo /> */}
       {/* useMemo的使用 */}
       {/* <MemoDemo1 /> */}
-      <MemoDemo2 />
+      {/* <MemoDemo2 /> */}
+
+      {/* useRef的使用 */}
+      {/* <RefDemo1 /> */}
+      <RefDemo2 />
       <button onClick={() => setIsShow(!isShow)}>切换</button>
     </div>
   )
