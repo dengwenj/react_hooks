@@ -15,7 +15,8 @@ import React, { createContext, useState } from 'react'
 // import MemoDemo1 from './07_useMemo使用/01_useMemo复杂计算的应用'
 // import MemoDemo2 from './07_useMemo使用/02_useMemo传入子组件应用类型'
 // import RefDemo1 from './08_useRef使用/01_useRef引用DOM'
-import RefDemo2 from './08_useRef使用/02_useRef引用其他数据'
+// import RefDemo2 from './08_useRef使用/02_useRef引用其他数据'
+import ForwardDemo from './09_useImperatvieHandle使用/01_回顾forwardRef的用法'
 
 // 创建 context 容器对象
 export const userContext = createContext()
@@ -57,7 +58,10 @@ export default function App() {
 
       {/* useRef的使用 */}
       {/* <RefDemo1 /> */}
-      <RefDemo2 />
+      {/* <RefDemo2 /> */}
+
+      {/* useImperatvieHandle的使用 */}
+      <ForwardDemo />
       <button onClick={() => setIsShow(!isShow)}>切换</button>
     </div>
   )
