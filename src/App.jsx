@@ -18,7 +18,8 @@ import React, { createContext, useState } from 'react'
 // import RefDemo2 from './08_useRef使用/02_useRef引用其他数据'
 // import ForwardDemo from './09_useImperatvieHandle使用/01_回顾forwardRef的用法'
 // import ImperatvieHandleDeo from './09_useImperatvieHandle使用/02_useImperatvieHandle的用法'
-import LayoutEffectDemo from './10_useLayoutEffect使用/uselauoutEffect的count修改'
+// import LayoutEffectDemo from './10_useLayoutEffect使用/uselauoutEffect的count修改'
+import CustomizeHookDemo1 from './11_自定义Hook使用/01_自定义Hook的基本使用'
 
 // 创建 context 容器对象
 export const userContext = createContext()
@@ -65,7 +66,10 @@ export default function App() {
       {/* useImperatvieHandle的使用 */}
       {/* <ForwardDemo /> */}
       {/* <ImperatvieHandleDeo /> */}
-      <LayoutEffectDemo />
+      {/* <LayoutEffectDemo /> */}
+
+      {/* 自定义Hook */}
+      {isShow && <CustomizeHookDemo1 />}
       <button onClick={() => setIsShow(!isShow)}>切换</button>
     </div>
   )
