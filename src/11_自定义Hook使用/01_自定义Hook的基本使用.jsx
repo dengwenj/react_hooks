@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 
+/* 
+  自定义Hook本质上只是一种函数代码逻辑的抽取，严格意义上来说，它本身并不算React的特性
+*/
+
 function Person(params) {
   useHookPersonStudent('Person')
   return <div>Person</div>
