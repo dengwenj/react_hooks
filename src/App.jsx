@@ -12,7 +12,8 @@ import React, { createContext, useState } from 'react'
 // import Home from './05_useReducer使用/home'
 // import Count from './05_useReducer使用/Count'
 // import CallbackHookDemo from './06_useCallback的使用/01_useCallback进行性能优化'
-import MemoDemo1 from './07_useMemo使用/01_useMemo复杂计算的应用'
+// import MemoDemo1 from './07_useMemo使用/01_useMemo复杂计算的应用'
+import MemoDemo2 from './07_useMemo使用/02_useMemo传入子组件应用类型'
 
 // 创建 context 容器对象
 export const userContext = createContext()
@@ -44,7 +45,8 @@ export default function App() {
       {/* useCallback的使用 */}
       {/* <CallbackHookDemo /> */}
       {/* useMemo的使用 */}
-      <MemoDemo1 />
+      {/* <MemoDemo1 /> */}
+      <MemoDemo2 />
       <button onClick={() => setIsShow(!isShow)}>切换</button>
     </div>
   )
