@@ -1,38 +1,48 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { useMemo, memo, useState } from 'react';
 
-// memo 当你传入的值没有发生改变的话不会调用这个组件，浅比较，只有当地址值发生变化才会执行，每次对 props 进行一次浅比较
-const Dwj = memo(({ increment, title }) => {
-    console.log(increment);
-    console.log(title);
-    return (
-        <>
-            <button onClick={increment}>{title}</button>
-        </>
-    );
+const Dwj = memo(({ info }) => {
+    console.log(Math.random());
+    return <div></div>;
 });
 
+function callbackCount(count) {
+    let zCount = 0;
+    for (let i = 0; i <= count; i++) {
+        zCount = zCount + count;
+    }
+    return zCount;
+}
+
 export default function Demo() {
+    const [count, setCount] = useState(1);
     const [flag, setFlag] = useState(false);
-    const [count, setCount] = useState(0);
+    /* 返回一个有记忆的值，当这个依赖项不发生改变的时候，返回的值都是一样的，我这里写的[]这里谁都不依赖，
+       返回的值始终是一样的 
+    */
+    /* mac上： shift + option + a */
+    const info = useMemo(() => {
+        return { name: 'dwj', age: 21 };
+    }, []);
+    // const info = { name: '1' };
 
-    // 当依赖项不发生改变的时候，永远都是返回一个有记忆的函数
-    const callback = useCallback(() => {
-        console.log(count);
-        setCount(count + 1);
+    const zSCount = useMemo(() => {
+        return callbackCount(count);
     }, [count]);
+    console.log(zSCount);
 
-    const increment = () => {
-        setFlag(!flag);
+    const add = () => {
+        setCount(count + 1);
     };
 
+    const tf = () => {
+        setFlag(!flag);
+    };
     return (
-        <div>
-            <div>count:{count}</div>
-            <button>{flag ? 'true' : 'false'}</button>
-            <br />
-            <Dwj increment={callback} title={'btn1'} />
-            <br />
-            <Dwj increment={increment} title={'btn2'} />
-        </div>
+        <>
+            <h3>{zSCount}</h3>
+            <button onClick={add}>{count}</button>
+            <button onClick={tf}>{flag ? 'true' : 'false'}</button>
+            <Dwj info={info} />
+        </>
     );
 }
