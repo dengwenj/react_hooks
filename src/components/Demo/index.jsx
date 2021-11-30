@@ -54,3 +54,27 @@ export default function Demo() {
         </div>
     )
 }
+
+// export default function Hello() {
+//     /* 
+//         useCallback 结合 useEffect 使用
+//     */
+//     const [name, setName] = useState('');
+//     // const consoleLog = () => {
+//     //     console.log('没有被 useCallback 包裹的consoleLog执行了');
+//     // };
+//     // 这样的话 这个函数只有不会变化了
+//     const consoleLog = useCallback(() => {
+//         console.log('没有被 useCallback 包裹的consoleLog执行了');
+//     }, [])
+//     useEffect(() => {
+//         consoleLog();
+//         console.log("useEffect 执行了");
+//     }, [consoleLog]);
+//     console.log("render 生命周期触发了");
+//     return (<div>
+//         <input value={name} onChange={(e) => {
+//             setName(e.target.value);
+//         }} />
+//     </div>);
+// }
