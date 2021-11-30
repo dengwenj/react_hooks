@@ -1,5 +1,4 @@
 import React, { useReducer, createContext } from 'react';
-
 import AsyncIncrement from './components/AsyncIncrement';
 
 export const asyncContext = createContext();
