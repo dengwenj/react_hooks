@@ -11,11 +11,12 @@ const Dwj = forwardRef((props, ref) => {
     </>
   )
 })
-
+// **forwardRef 可以在父组件中操作子组件的 ref 对象**
 export default function Demo() {
   const inputRef = useRef()
   useEffect(() => {
      console.log(inputRef); // 子组件里面的 input 标签
+     inputRef.current.focus()
   })
   return (
     <div>
