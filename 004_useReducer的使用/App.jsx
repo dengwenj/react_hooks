@@ -14,7 +14,7 @@ export default function App() {
             >
                 删除
             </button>
-            {flag ? <Demo /> : ''}
+            {flag ? <Demo num={1} /> : ''}
         </div>
     );
 }
