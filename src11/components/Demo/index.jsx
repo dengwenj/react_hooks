@@ -31,12 +31,12 @@ function reducer(preState, action) {
 
 export default function Demo({ num }) {
     // 第三个参数是一个函数，不写第三个参数的话，第二个参数就是 state 的值
-    const [state, dispatch] = useReducer(reducer, 0, initState);
+    const [state, dispatch] = useReducer(reducer, num, initState);
     // const [state, dispatch] = useReducer(reducer, initState);
-    console.log(state); // state 的值就是 initState 函数的返回值
+    // console.log(state); // state 的值就是 initState 函数的返回值
 
     useEffect(() => {
-        dispatch({ type: 'increment', data: 1 })
+        // dispatch({ type: 'increment', data: 1 })
     }, [])
     return (
         <>

@@ -1,6 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 
-export default forwardRef((props, ref) => {
+const Demo2 = forwardRef((props, ref) => {
   function fn(data) {
     console.log(data);
     console.log(1);
@@ -17,6 +17,9 @@ export default forwardRef((props, ref) => {
       inputRef,
       inputRef1,
       div,
+      hhhhhhh: function ggg() {
+        console.log('ggg')
+      }
     }
   })
   return (
@@ -26,3 +29,5 @@ export default forwardRef((props, ref) => {
     </>
   )
 })
+
+export default Demo2
